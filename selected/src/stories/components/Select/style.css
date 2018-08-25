@@ -1,0 +1,69 @@
+ul, body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mui-select-root {
+  width: 254px;
+  height: 40px;
+  border-bottom: 1px solid #e9e9e9;
+  background-color: transparent;
+  display: flex;
+}
+
+.mui-select-value {
+  width: 80%;
+  height: 100%;
+  cursor: pointer;
+  font-family: Roboto, 'sans-serif'
+}
+
+.mui-select-arrow-button {
+  background-color: transparent;
+  width: 20%;
+  fill: #e9e9e9;
+  height: 100%;
+  border: none;
+  outline: none !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mui-select-items-container {
+  max-height: 300px;
+  position: fixed;
+  padding: 18px 0;
+  background-color: #fff;
+  box-shadow: 0px 5px 5px -3px
+    rgba(0, 0, 0, 0.2), 0px 8px 10px 1px
+    rgba(0, 0, 0, 0.14), 0px 3px 14px 2px
+    rgba(0, 0, 0, 0.12);
+    overflow-y: scroll;
+}
+
+.mui-select-list-item {
+  height: 40px;
+  font-family: Roboto, 'sans-serif';
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+}
+
+.mui-select-list-item.active {
+  color: #E863B8;
+}
+
+.mui-select-items-container-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.mui-select-list-item:hover {
+  background-color: #e9e9e9;
+}
