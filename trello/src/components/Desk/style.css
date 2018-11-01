@@ -1,0 +1,13 @@
+.board {
+  position: relative;
+  flex: 1;
+  background-color: #0279bf;
+  justify-content: center;
+}
+
+.wrapper {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

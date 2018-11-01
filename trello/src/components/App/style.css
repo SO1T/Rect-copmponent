@@ -1,0 +1,20 @@
+body {
+  background: #0279bf;
+}
+
+.app > header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #026aa7;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  height: 30px;
+  padding: 5px 8px;
+}
+
+.app > header h2 {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: Tahoma;
+  font-weight: 100;
+}
