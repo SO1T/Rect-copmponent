@@ -1,5 +1,4 @@
-import { compose, withHandlers, withState, mapProps } from 'recompose';
-import uuid from 'uuid/v4';
+import { compose, withHandlers, mapProps } from 'recompose';
 
 import Section from './Section';
 
@@ -15,20 +14,10 @@ const withAddingCard =  compose(
   }),
   withHandlers({
     onAddCard: props => () => {
-      const newCards = [...props.cards, { id: uuid() }];
-      props.setCards(newCards);
+      props.onCardAdd(props.id);
     },
-    onEditCard: ({ cards, setCards }) => editedCardData => {
-      const editedCardIndex = cards.findIndex(card => (card.id === editedCardData.id));
-      if (editedCardIndex === -1) {
-        return;
-      }
-      const newCards = [
-        ...cards.slice(0, editedCardIndex),
-        { ...cards[editedCardIndex], ...editedCardData},
-        ...cards.slice(editedCardIndex + 1),
-      ];
-      setCards(newCards);
+    onEditCard: props => editedCardData => {
+      props.onCardEdit(props.id, editedCardData);
     },
   }),
   mapProps(({ setCards, ...props }) => props)
